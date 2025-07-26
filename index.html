@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom, #ffeafc, #fff5ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Comic Sans MS', cursive;
+      margin: 0;
+    }
+
+    .cake {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+       .cake .layer {
+      position: absolute;
+      width: 100%;
+      height: 60px;
+      background: #fff4d1;
+      border-radius: 10px;
+      box-shadow: 0 4px 0 #e89ab2;
+    }
+
+    .cake .layer:nth-child(2) {
+      top: 50px;
+      width: 200px;
+      left: 0px;
+      background: #482c30;
+    }
+
+    .cake .layer:nth-child(3) {
+      top: 100px;
+      width: 200px;
+      left: 0px;
+      background: #fff4d1;
+    }
+
+    .cake .flame {
+      position: absolute;
+      top: -15px;
+      left: 95px;
+      width: 10px;
+      height: 20px;
+      background: orange;
+      border-radius: 50%;
+      animation: flicker 1s infinite;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #ada8ec;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      color: #e9a5d6;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      font-size: 18px;
+      color: white;
+      font-style: italic;
+      background-color: #e9a5d6;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 0 #c7d5f9;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #d378b9;
+    }
+
+  </style>
+  <link rel="stylesheet" href="bubble.css" />
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3f4e32f48e.mp3?filename=cute-background-112196.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+<script src="bubble.js"></script>
+  <div class="cake">
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="candle"></div>
+    <div class="flame" id="flame"></div>
+  </div>
+
+  <h1>(belated) happy birthday nong jeda jraa</h1>
+  <p> ชั้นมีการ์ดอวยพรมาให้แหละ</p>
+  <button class="btn" onclick="blowCandle()">open 🎁</button>
+
+  <audio id="blowSound" src="blow-candle.mp3" preload="auto"></audio>
+
+  <script>
+    function blowCandle() {
+      const sound = document.getElementById('blowSound');
+      const flame = document.getElementById('flame');
+
+      // เล่นเสียงเป่าเทียน
+      sound.play();
+
+      // ดับเปลวไฟ
+      flame.style.display = 'none';
+
+      // ไปหน้า page2.html หลังจาก 2 วินาที
+      setTimeout(() => {
+        window.location.href = 'page2.html';
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>

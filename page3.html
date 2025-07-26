@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>page3</title>
+
+  <!-- ฟ้อนน่ารักจาก Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Itim', cursive;
+      background: linear-gradient(to bottom, #ffeafc, #fff5ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #ff69b4; /* ฟ้อนชมพูสดใส */
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #799efd; /* หัวข้อชมพูเข้ม */
+    }
+
+    p {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+
+    button {
+      font-family: 'Itim', cursive;
+      font-size: 24px;
+      color: white;
+      background-color: #e9a5d6;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #d378b9;
+    }
+  </style>
+  <link rel="stylesheet" href="bubble.css" />
+</head>
+<body>
+  <h1>สุขสันต์วันเกิด น้องเจด้า</h1>
+  <p>พี่เจเก่งมากกก โตขึ้นอีกปีแระ ไวมากเลยยย เค้าขอให้ปีนี้เปนปีที่ดี
+    พี่เจกินของอร่อยเย่อเย้อ (ไว้คัตสึมิโดริ ิ ิ) ปีนี้ขอให้เราเจอกันบ่อยบ่อย
+    มีเรื่องแฮปปี้มากมาก ช้านรักแกมากจ้ะ เด้กเร้กของแม่🪸🤍
+  </p>
+  <p>จากน้องพอมอ</p>
+  <button onclick="goNext('page4.html')">click !</button>
+
+  <script>
+    function goNext(url) {
+      window.location.href = url;
+    }
+  </script>
+  <script src="bubble.js"></script>
+</body>
+</html>

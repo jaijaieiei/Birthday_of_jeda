@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>page5</title>
+
+  <!-- ฟ้อนน่ารักจาก Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Itim', cursive;
+      background: linear-gradient(to bottom, #ffeafc, #fff5ff);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: #ff69b4; /* ฟ้อนชมพูสดใส */
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 48px;
+      color: #799efd; /* หัวข้อชมพูเข้ม */
+    }
+
+    p {
+      font-size: 24px;
+      margin: 20px 0;
+    }
+
+    button {
+      font-family: 'Itim', cursive;
+      font-size: 24px;
+      color: white;
+      background-color: #e9a5d6;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #d378b9;
+    }
+  </style>
+  <link rel="stylesheet" href="bubble.css" />
+</head>
+<body>
+  <h1>สุขสันต์วันเกิดแฮปปี้พี่เจของสเม้</h1>
+  <p> ขออวยพรให้พี่เจมีความสุขมากๆ ขอบคุณที่แจกความสดใสให้โลกใบนี้ ร่างกายแข็งแรง รวย ๆ จะได้มาเลี้ยงพี่ๆ ออนนี่ 😋 ขอให้ประสบความสำเร็จทุกอย่างในชีวิต คิดสิ่งใดได้สิ่งนั้น ขอให้การสอบที่จะเข้ามานี้ราบรื่นเป็นไปตามที่พี่เจต้องการ ขอให้ได้เข้ามหาลัยที่ต้องการและมีความสุขในรั้วมหาลัยนะ เมนเต้รักพี่เจที่สุด 😘☺️🩷🤍
+  </p>
+  <p>จาก สเม้</p>
+  <button onclick="goNext('page6.html')">click !</button>
+
+  <script>
+    function goNext(url) {
+      window.location.href = url;
+    }
+  </script>
+  <script src="bubble.js"></script>
+</body>
+</html>
